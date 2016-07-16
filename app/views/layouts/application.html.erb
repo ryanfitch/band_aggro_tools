@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AggroProj</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Band Aggregator</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<header class="header">
+  <h1>Band Scout</h1>
+  <h2>Artist/Song Data Aggregator</h2>
+</header>
 
-  <body>
-    <%= yield %>
-  </body>
+<div class="header_links">
+  <button>
+    <%= link_to 'Soundcloud Charts', soundcloud_index_path %>
+  </button>
+  <button>
+    <%= link_to 'Spotify Latest Playlist', spotify_index_path %>
+  </button>
+</div>
+<br><hr>
+
+<%= yield %>
+
+</body>
 </html>
