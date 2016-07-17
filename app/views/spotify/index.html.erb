@@ -1,7 +1,11 @@
+<div id="spotify" class="tab-pane fade in active">
 
-<h3>Spotify Latest Playlist Search</h3>
+<h3>Find the latest Spotify playlist by user name:</h3><br><br>
 
-<form action="demo_form.asp">
-  Spotify User Name: <input type="text" name="spotify_user"><br><br>
-  <input type="submit" value="Hit Me!">
-</form>
+<%= form_tag("/spotify_playlist", method: "get") do %>
+  <%= label_tag(:spotify_user, "Spotify User Name:") %>
+  <%= text_field_tag(:spotify_user) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+</div>

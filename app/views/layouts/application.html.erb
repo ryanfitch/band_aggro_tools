@@ -9,21 +9,24 @@
 <body>
 
 <header class="header">
-  <h1>Band Scout</h1>
-  <h2>Artist/Song Data Aggregator</h2>
-</header>
+  <h1 class="header_title">BAND SCOUT</h1>
+  <h3>Artist/Song Data Aggregator</h3>
+</header><br><br>
 
-<div class="header_links">
-  <button>
-    <%= link_to 'Soundcloud Charts', soundcloud_index_path %>
-  </button>
-  <button>
-    <%= link_to 'Spotify Latest Playlist', spotify_index_path %>
-  </button>
-</div>
-<br><hr>
+<ul class="nav nav-tabs nav-justified">
+  <li class="active"><a data-toggle="tab" href="#soundcloud">Soundcloud Charts</a></li>
+  <li><a data-toggle="tab" href="#spotify">Latest Spotify Playlist</a></li>
+  <li><a data-toggle="tab" href="#venue">Venue Calendars</a></li>
+  <li><a data-toggle="tab" href="#about">About</a></li>
+</ul><br>
+
+
+<div class="tab-content">
 
 <%= yield %>
 
+</div>
+
 </body>
 </html>
+

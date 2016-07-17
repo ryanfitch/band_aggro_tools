@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'venue/index'
+
+  get 'about/index'
+
   get 'search_results/index'
 
   get 'spotify/index'
